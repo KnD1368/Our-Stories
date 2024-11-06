@@ -16,7 +16,6 @@ function updateTimer() {
 
 function toggleMenu() {
     document.getElementById("sidebar").classList.toggle("active");
-    
 }
 
 updateTimer();
@@ -129,7 +128,7 @@ function stopRain() {
     rainInterval = null;
 }
 
-toggleRainButton.addEventListener('change', function (elem) {
+toggleRainButton.addEventListener('change', function () {
     if (this.checked) {
         notiTitle.innerHTML= "XIN PHÉP THÔNG BÁO"
         noti.style.display = "block";
@@ -140,26 +139,22 @@ toggleRainButton.addEventListener('change', function (elem) {
     }
 })
 
-const cEP = document.querySelectorAll('#ep-title');
-const EPc = document.querySelector('.ep-content');
 const loveimg = document.querySelector('#love-img');
 const ourStories = document.querySelector('.title h1');
 const CD = document.querySelector('.countdown');
 const settings = document.querySelector('.settings');
 const settingsPopup = document.querySelector('.settingsPopup');
-const body = document.querySelector('.ep-content');
+const EPc = document.querySelector('.ep-content');
+const cEP = document.querySelectorAll('#ep-title');
+const toggleFontButton = document.querySelector('#toggleFont')
 
-body.addEventListener("click", () => {
-    settingsPopup.style = "display: none;"
+toggleFontButton.addEventListener("change", function(){
+    if (this.checked) {
+        EPc.classList.add('fontChange'); // Apply the font style to all content within EPc
+    } else {
+        EPc.classList.remove('fontChange'); // Remove the font style
+    }
 })
-
-
-ourStories.addEventListener("click", () => {
-    loveimg.style = "display: block;"
-    CD.style = "display: block;"
-    EPc.style = "display: none;"
-})
-
 cEP[0].addEventListener("click", () => {
     EPc.style = "display: block;"
     loveimg.style = "display: none;"
@@ -175,6 +170,12 @@ cEP[2].addEventListener("click", () => {
     EPc.innerHTML = "NỘI DUNG EP 3 ĐAYYYYYYYYYYYYYYYYYYYYYYY"
 });
 
-settings.addEventListener("click", () => {
-    settingsPopup.style = "display: block;"
-});
+ourStories.addEventListener("click", () => {
+    loveimg.style = "display: block;"
+    CD.style = "display: block;"
+    EPc.style = "display: none;"
+})
+
+function Togglesettings() {
+    document.querySelector(".settingsPopup").classList.toggle("show");
+}

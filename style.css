@@ -6,6 +6,7 @@
     font-weight: 700;
     color: #cecece;
     user-select: none;
+    overflow: hidden;
 }
 
 html,
@@ -37,7 +38,7 @@ body {
     top: 10%;
     width: 100%;
     text-align: center;
-    padding: 50px 0;
+    padding: 20px 0;
 }
 
 .container nav .title h1 {
@@ -120,7 +121,9 @@ body {
     background:none;
     cursor: pointer;
 }
-
+.settingsPopup.show{
+    display: block;
+}
 .settingsPopup{
     display: none;
     height: 200px;
@@ -157,7 +160,6 @@ body {
         /* display: none!important; */
     }
     .toggle, .toggle-label{
-       margin-top: 80px;
        z-index: 100;
     }
 
@@ -325,7 +327,7 @@ input:checked + .slider:before {
     position: absolute;
     top: 50%;
     left: 50%;
-    background-color: #2f2f2f;
+    background-color: #171717;
     transform: translate(-50%, -50%);
     z-index: 100000;
     border-radius: 10px;
@@ -375,8 +377,12 @@ input:checked + .slider:before {
 }
 
 .ep-content{
-    height: 100%;
     width: 100%;
-    margin-top: 20px;
-    line-height: 20px;
+    margin-top: 24px;
+    margin-left: 24px;
+    line-height: 18px;
+}
+.fontChange{
+    font-family: Arial;
+    font-weight: 300;
 }
