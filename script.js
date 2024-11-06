@@ -156,18 +156,21 @@ toggleFontButton.addEventListener("change", function(){
     } else {
         EPc.classList.remove('fontChange'); // Remove the font style
     }
-})
+});
 cEP[0].addEventListener("click", () => {
+    document.getElementById("sidebar").classList.remove("active");
     EPc.style = "display: block;"
     loveimg.style = "display: none;"
     CD.style = "display: none;"
     EPc.innerHTML = "NỘI DUNG EP 1 ĐAYYYYYYYYYYYYYYYYYYYYYYY"
 });
 cEP[1].addEventListener("click", () => {
+    document.getElementById("sidebar").classList.remove("active");
     EPc.style = "display: block;"
     EPc.innerHTML = "NỘI DUNG EP 2 ĐAYYYYYYYYYYYYYYYYYYYYYYY"
 });
 cEP[2].addEventListener("click", () => {
+    document.getElementById("sidebar").classList.remove("active");
     EPc.style = "display: block;"
     EPc.innerHTML = "NỘI DUNG EP 3 ĐAYYYYYYYYYYYYYYYYYYYYYYY"
 });
