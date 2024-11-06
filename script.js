@@ -16,6 +16,8 @@ function updateTimer() {
 
 function toggleMenu() {
     document.getElementById("sidebar").classList.toggle("active");
+    document.querySelector(".settingsPopup").classList.remove("show");
+
 }
 
 updateTimer();
@@ -177,7 +179,7 @@ ourStories.addEventListener("click", () => {
 })
 
 function Togglesettings() {
-    document.querySelector(".settingsPopup").classList.add("show");
+    document.querySelector(".settingsPopup").classList.toggle("show");
     document.getElementById("sidebar").classList.toggle("active");
     document.addEventListener('keydown', (event) => {
         if (event.key === 'Escape') {
