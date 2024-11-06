@@ -152,12 +152,9 @@ body {
     z-index: 10;
 }
 
-@media (max-width: 768px) and (max-width: 1024px) {
+@media (min-width: 1px) and (max-width: 1024px) {
     .container {
         flex-direction: column;
-    }
-    .toggle-container{
-        /* display: none!important; */
     }
     .toggle, .toggle-label{
        z-index: 100;
