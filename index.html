@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oooh+Baby:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <title>Our Stories</title>
+</head>
+
+<body>
+    <div class="container">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav id="sidebar">
+            <button class="settings">&#9881;</button>
+
+
+
+            <div class="title">
+                <h1>Our Stories</h1>
+                <h2 style="color: #fd5d62;">--- chưa nghĩ lại được tên ---</h2>
+                <ul>
+                    <li id="ep-title"><a href="#">EPISODE 1</a></li>
+                    <li id="ep-title"><a href="#">EPISODE 2</a></li>
+                    <li id="ep-title"><a href="#">EPISODE 3</a></li>
+                </ul>
+            </div>
+            <div class="footer">
+                <a href="#">You Look So Sad, Why??</a>
+            </div>
+        </nav>
+        <div class="content">
+            <div class="noti" style="display:none;">
+                <div class="notiTitle">
+                    <h1 style="line-height: 50px;">Xin Phép Thông Báo</h1>
+                </div>
+                <span class="notiContent"></span>
+                <button class="btnClose">OK</button>
+            </div>
+
+            <div class="settingsPopup">
+                <div class="toggle-container">
+                    <label class="toggle">
+                        <input type="checkbox" id="toggleButton" checked>
+                        <span class="slider"></span>
+                    </label>
+                    <span class="toggle-label">Hiệu ứng trỏ chuột</span>
+                </div>
+                <div class="toggle-container">
+                    <label class="toggle">
+                        <input type="checkbox" id="toggleRain">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="toggle-label">Cơn mưa tình yêu</span>
+                </div>
+                <div class="toggle-container">
+                    <label class="toggle">
+                        <input type="checkbox" id="toggleRain">
+                        <span class="slider"></span>
+                    </label>
+                    <span class="toggle-label">Thay đổi Font chữ</span>
+                </div>
+            </div>
+            <div class="main-bg">
+                <img id="love-img" src="love.svg" alt="Love Img" />
+                <div class="countdown">
+                    <h1>WE IS </h1><br />
+                    <div id="timer"></div>
+                </div>
+            </div>
+            <div class="ep-content">
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
