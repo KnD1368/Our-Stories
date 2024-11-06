@@ -177,5 +177,12 @@ ourStories.addEventListener("click", () => {
 })
 
 function Togglesettings() {
-    document.querySelector(".settingsPopup").classList.toggle("show");
+    document.querySelector(".settingsPopup").classList.add("show");
+    document.getElementById("sidebar").classList.toggle("active");
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape') {
+            document.querySelector(".settingsPopup").classList.remove("show");
+        }
+    });
+
 }
